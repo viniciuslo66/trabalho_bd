@@ -1,0 +1,51 @@
+
+Departamento:
+- ID: PRIMARY KEY  
+- Nome: VARCHAR
+
+Funcionário:
+- Matricula: INT PRIMARY KEY
+- Nome: VARCHAR
+- Contato: INT
+- Endereço: VARCHAR
+- Departamento: INT CHAVE ESTRAGEIRA (ID Departamento)
+- Salário: DOUBLE
+
+--------------------------------
+
+Cliente: 
+- ID: INT PRIAMTY KEY
+- Nome:	VARCHAR
+- Contato: INT MULTIVALORADO 
+- CPF/CNPJ: INT
+- Endereço: VARCHAR 
+- Tipo: INT CHAVE ESTRAGEIRA (ID ClienteType)
+
+ClienteType:
+- ID: PRIMARY KEY
+- Nome: VARCHAR
+
+---------------------------------
+
+Serviços:
+- ID: INT PRIMARY KEY
+- Nome: VARCHAR
+- Preço: DOUBLE
+
+---------------------------------
+
+Veiculo:
+- ID: INT PRIMARY KEY
+- Nome: VARCHAR
+
+---------------------------------
+
+Orçamento: 
+- NumeroOrçamento: INT VARCHAR KEY
+- Cliente: CHAVE ESTRAGEIRA (ID CLIENTE)
+- Veiculo: CHAVE ESTRAGEIRA (ID VEICULO)
+- Serviço: CHAVE ESTRAGEIRA (ID SERVIÇO)
+
+OrçamentoServiço:
+- ID_Orçamento: INT CHAVE ESTRANGEIRA (NumeroOrçamento Orçamento)
+- ID_Serviço: INT CHAVE ESTRANGEIRA (ID Serviço)
